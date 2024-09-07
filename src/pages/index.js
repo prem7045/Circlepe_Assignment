@@ -1,5 +1,7 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import { useState, useEffect, useRef } from 'react';
+import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -13,103 +15,304 @@ const geistMono = localFont({
 });
 
 export default function Home() {
-  return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [currentDiv, setCurrentDiv] = useState(0);
+  const intervalRef = useRef(null); // Ref to store the interval ID
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  // Function to reset the interval
+  const resetInterval = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
+      setCurrentDiv((prevDiv) => (prevDiv + 1) % 6);
+    }, 2000); // 2000 milliseconds = 2 seconds
+  };
+
+  // Function to handle clicks and reset the interval
+  const handleDocumentClick = () => {
+    resetInterval();
+    setCurrentDiv((prevDiv) => (prevDiv + 1) % 6);
+  };
+
+  // Function to handle keydown events and reset the interval
+  const handleKeyDown = (event) => {
+    resetInterval();
+    if (event.key === 'ArrowRight') {
+      setCurrentDiv((prevDiv) => (prevDiv + 1) % 6);
+    } else if (event.key === 'ArrowLeft') {
+      setCurrentDiv((prevDiv) => (prevDiv - 1 + 6) % 6);
+    }
+  };
+
+  // Set up the automatic slide change every 2 seconds and add event listeners
+  useEffect(() => {
+    resetInterval();
+
+    // Add event listeners
+    document.addEventListener('click', handleDocumentClick);
+    window.addEventListener('keydown', handleKeyDown);
+
+    // Cleanup the event listeners and interval on component unmount
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+      window.removeEventListener('keydown', handleKeyDown);
+      clearInterval(intervalRef.current);
+    };
+  }, []);
+
+  
+  return (
+    
+    <div
+    id="main"
+        >
+    <Head>
+        <title>Circlepe Assignmaent</title>
+      </Head>
+
+    <div id="slide1" style={{visibility: currentDiv === 0 ? 'visible' : 'hidden',opacity: currentDiv === 0 ? 1 : 0 }}>
+      <div className="intro" > 
+        
+        <div className="ellipse1"></div>
+        <div className="rectangle">
+          
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="progress">
+            <div className="progress-bar"></div>
+            <div className="progress-circle"></div>
+          </div>
+        <div className="discription1">
+          <h1>How does it <span>Work</span> <span>?</span></h1>
+           
+          <div className="line"></div>
+          
+          <p>We make it possible in a quick and easy few steps process, takes max 5 mins</p>
+        </div>
+        
+        <Image
+          className="slide1-Img"
+          src="/slide1.svg"
+          alt="Next.js logo"
+          width={211}
+          height={1079.29} 
+        />
+        
+      </div>
+    </div>
+
+
+    <div id="slide2" style={{visibility: currentDiv === 1? 'visible' : 'hidden' ,opacity: currentDiv === 1 ? 1 : 0}}>
+      <div className="intro" > 
+        
+        <div className="ellipse2"></div>
+        <div className="rectangle">
+          
+        </div>
+        <div className="progress">
+            <div className="progress-bar"></div>
+            <div className="progress-circle"></div>
+          </div>
+        <div className="discription">
+          <h1>Step <span>1</span></h1>
+           
+          <div className="line"></div>
+          
+          <ul className="slide3-step" >
+            <li className="onstep">Tenant selects the property</li>
+            <li>Tenant selects flexible rent tenure & corresponding amount</li>
+          </ul>
+        </div>
+        
+        <Image
+          className="slide2-Img"
+          src="/slide2.svg"
+          alt="Next.js logo"
+          width={211}
+          height={1079.29} 
+        />
+
+        <Image
+          className="arrow1"
+          src="/arrow1.svg"
+          alt="Next.js logo"
+          width={100}
+          height={100} 
+        />
+        
+      </div>
+    </div>
+
+
+    <div id="slide3"  style={{visibility: currentDiv === 2 ? 'visible' : 'hidden',opacity: currentDiv === 2 ? 1 : 0 }}>
+      <div className="intro" > 
+        
+        <div className="ellipse3"></div>
+        <div className="rectangle"></div>
+        <div className="progress">
+            <div className="progress-bar"></div>
+            <div className="progress-circle"></div>
+          </div>
+        <div className="discription">
+          <h1>Step <span>1</span></h1>
+           
+          <div className="line"></div>
+          
+          <ul className="slide3-step">
+            <li >Tenant selects the property</li>
+            <li className="onstep">Tenant selects flexible rent tenure & corresponding amount</li>
+          </ul>
+        </div>
+        
+        <Image
+          className="slide3-Img"
+          src="/slide3.svg"
+          alt="Next.js logo"
+          width={211}
+          height={1079.29} 
+        />
+
+        <Image
+          className="arrow2"
+          src="/arrow2.svg"
+          alt="Next.js logo"
+          width={100}
+          height={100} 
+        />
+        
+      </div>
+    </div>
+
+
+    <div id="slide4" style={{visibility: currentDiv === 3 ? 'visible' : 'hidden' ,opacity: currentDiv === 3 ? 1 : 0}}>
+      <div className="intro" > 
+        
+        <div className="ellipse4"></div>
+        <div className="rectangle"></div>
+        <div className="progress">
+            <div className="progress-bar"></div>
+            <div className="progress-circle"></div>
+          </div>
+        <div className="discription">
+          <h1>Step <span>2</span></h1>
+           
+          <div className="line"></div>
+          
+          <ul className="slide4-step">
+            <li className="onstep1">Tenant selects Pay with Circle enabling :</li>
+            <li >Zero security deposit move-in </li>
+            <li >Reduced rent offer </li>
+            <li >3 months salary cover</li>
+          </ul>
+        </div>
+        
+        <Image
+          className="slide4-Img"
+          src="/slide4.svg"
+          alt="Next.js logo"
+          width={211}
+          height={1079.29} 
+        />
+
+        <Image
+          className="arrow2"
+          src="/arrow2.svg"
+          alt="Next.js logo"
+          width={100}
+          height={100} 
+        />
+        
+      </div>
+    </div>
+
+
+
+    <div id="slide5" style={{visibility: currentDiv === 4 ? 'visible' : 'hidden' ,opacity: currentDiv === 4 ? 1 : 0}}>
+      <div className="intro" > 
+        
+        <div className="ellipse5"></div>
+        <div className="rectangle"></div>
+        <div className="progress">
+            <div className="progress-bar"></div>
+            <div className="progress-circle"></div>
+          </div>
+        <div className="discription" id="dis5">
+          <h1>Step <span>3</span></h1>
+           
+          <div className="line"></div>
+          
+          <ul className="slide4-step">
+            <li className="onstep5">Smooth Onboarding for the Tenant begins</li>
+          </ul>
+        </div>
+        
+        <Image
+          className="slide5-Img"
+          src="/slide5.svg"
+          alt="Next.js logo"
+          width={211}
+          height={1079.29} 
+        />
+
+        <Image
+          className="arrow3"
+          src="/arrow3.svg"
+          alt="Next.js logo"
+          width={100}
+          height={100} 
+        />
+        
+      </div>
+    </div>
+
+
+    <div id="slide6" style={{visibility: currentDiv === 5? 'visible' : 'hidden',opacity: currentDiv === 5 ? 1 : 0 }}>
+      <div className="intro" > 
+        
+        <div className="ellipse6"></div>
+        <div className="rectangle"></div>
+        <div className="progress">
+            <div className="progress-bar"></div>
+            <div className="progress-circle"></div>
+          </div>
+        <div className="discription" id="dis6">
+          <h1>Step <span>4</span></h1>
+           
+          <div className="line"></div>
+          
+          <ul className="slide6-step">
+            
+            
+          </ul>
+          <ul className="slide6-step">
+            <li className="onstep" >Tenant gets approved to move-in :</li>
+            <ul>
+              <li >Gets Zero-security deposit approval</li>
+              <li >Zero cost EMI = Monthly Rent</li>
+            </ul>
+            
+          </ul>
+        </div>
+        
+        <Image
+          className="slide6-Img"
+          src="/slide6.svg"
+          alt="Next.js logo"
+          width={211}
+          height={1079.29} 
+        />
+
+        <Image
+          className="arrow6"
+          src="/arrow6.svg"
+          alt="Next.js logo"
+          width={100}
+          height={100} 
+        />
+        
+      </div>
+    </div>
+
+
     </div>
   );
 }

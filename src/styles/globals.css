@@ -25,3 +25,592 @@ body {
     text-wrap: balance;
   }
 }
+
+/* #main{
+  height:fit-content;
+  width:fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+#slide1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1044px;
+  width: 1512px;
+  overflow: hidden;
+  /* transition: opacity 1s ease; */
+  
+  /* visibility:visible; */
+}
+
+#slide2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1044px;
+  width: 1512px;
+  overflow: hidden;
+  /* transition: opacity 1s ease; */
+  visibility:hidden;
+}
+
+#slide3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1044px;
+  width: 1512px;
+  overflow: hidden;
+  /* transition: opacity 1s ease; */
+  visibility: hidden;
+}
+#slide4{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1044px;
+  width: 1512px;
+  overflow: hidden;
+  /* transition: opacity 0.5s ease; */
+  visibility:hidden;
+}
+#slide5{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  height: 1044px;
+  width: 1512px;
+  overflow: hidden;
+  /* transition: opacity 1s ease; */
+  visibility: hidden;
+}
+#slide6{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  height: 1044px;
+  width: 1512px;
+  overflow: hidden;
+  /* transition: opacity 1s ease; */
+  visibility: hidden;
+}
+
+#slide{
+  
+  visibility: hidden;
+}
+
+.intro{
+  
+  width: 1512px;
+  height: 1044px;
+  top: -408px;
+  left: -6559px;
+  gap: 0px;
+  opacity: 0px;
+  background: rgba(27, 27, 27, 1);
+  
+  
+}
+
+
+.ellipse{
+  position: absolute;
+  width: 1103px;
+  height: 1071.08px;
+  top: -169px;
+  left: -358px;
+  gap: 0px;
+  opacity: 0px;
+  background: radial-gradient(35.19% 35.19% at 50% 50%, rgba(59, 149, 255, 0.17) 0%, rgba(28, 106, 197, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  
+}
+
+.ellipse1{
+  position: absolute;
+  width: 1103px;
+  height: 1071.08px;
+  top: -169px;
+  left: -358px;
+  gap: 0px;
+  opacity: 0px;
+  background: radial-gradient(35.19% 35.19% at 50% 50%, rgba(59, 149, 255, 0.17) 0%, rgba(28, 106, 197, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  
+}
+.ellipse2{
+  position: absolute;
+  width: 1103px;
+  height: 1071.08px;
+  top: -69px;
+  left: -373px;
+  gap: 0px;
+  opacity: 0px;
+  background: radial-gradient(35.19% 35.19% at 50% 50%, rgba(59, 149, 255, 0.17) 0%, rgba(28, 106, 197, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  
+}
+.ellipse3{
+  position: absolute;
+  width: 1103px;
+  height: 1071.08px;
+  top: -69px;
+  left: -373px;
+  gap: 0px;
+  opacity: 0px;
+  background: radial-gradient(35.19% 35.19% at 50% 50%, rgba(59, 149, 255, 0.17) 0%, rgba(28, 106, 197, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  
+}
+
+.ellipse4{
+  position: absolute;
+  width: 1103px;
+  height: 1071.08px;
+  top: -69px;
+  left: -373px;
+  gap: 0px;
+  opacity: 0px;
+  background: radial-gradient(35.19% 35.19% at 50% 50%, rgba(59, 149, 255, 0.17) 0%, rgba(28, 106, 197, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  
+}
+.ellipse5{
+  position: absolute;
+  width: 1103px;
+  height: 1071.08px;
+  top: 26px;
+  left: -356px;
+  gap: 0px;
+  opacity: 0px;
+  background: radial-gradient(35.19% 35.19% at 50% 50%, rgba(59, 149, 255, 0.17) 0%, rgba(28, 106, 197, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  
+}
+.ellipse6{
+  position: absolute;
+  width: 1103px;
+  height: 1071.08px;
+  top: 123px;
+  left: -354px;
+  gap: 0px;
+  opacity: 0px;
+  background: radial-gradient(35.19% 35.19% at 50% 50%, rgba(59, 149, 255, 0.17) 0%, rgba(28, 106, 197, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  
+}
+
+.rectangle{
+  position: relative;
+  width: 513px;
+  height: 1059px;
+  top: -15px;
+  left: 999px;
+  gap: 0px;
+  opacity: 0px;
+
+  background: rgba(0, 0, 0, 0.2);
+
+}
+
+.discription{
+  position: absolute;
+  width: 550px;
+  height:297px;
+  top: 368px;
+  left: 227px;
+  gap: 48px;
+  opacity: 0px;
+
+  h1{
+    font-family: League Spartan;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 58.88px;
+    text-align: left;
+    /* box-shadow: 0px 4px 92px 0px rgba(0, 0, 0, 0.25); */
+    color: rgba(170, 170, 170, 1);
+    margin-bottom: 50px;
+  }
+
+  span{
+    font-family: League Spartan;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 58.88px;
+    /* text-align: left; */
+    color: rgba(238, 238, 238, 1);
+
+
+  }
+
+   
+
+}
+.discription1{
+  position: absolute;
+  width: 550px;
+  height:297px;
+  top: 368px;
+  left: 227px;
+  gap: 48px;
+  opacity: 0px;
+
+  h1{
+    font-family: League Spartan;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 58.88px;
+    text-align: left;
+    /* box-shadow: 0px 4px 92px 0px rgba(0, 0, 0, 0.25); */
+    color: rgba(170, 170, 170, 1);
+    margin-bottom: 50px;
+    width: 283px;
+    height: 118px;
+    gap: 0px;
+    opacity: 0px;
+
+  }
+
+  span:nth-child(1){
+    font-family: League Spartan;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 58.88px;
+    /* text-align: left; */
+    color: rgba(242, 242, 242, 1);
+
+  }
+  span:nth-child(2){
+    font-family: League Spartan;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 58.88px;
+    color: rgba(69, 155, 255, 1);
+
+  }
+  p{
+    font-family: League Spartan;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 22.08px;
+    text-align: left;
+    width: 422px;
+    height: 44px;
+    gap: 0px;
+    opacity: 0px;
+    color: rgba(238, 238, 238, 1);
+    margin-top: 40px;
+
+
+  }
+
+   
+
+}
+.line{
+  width: 84.02px;
+  height: 0px;
+  gap: 0px;
+  border: 2px 0px 0px 0px;
+  opacity: 0px;
+  border: 2px solid rgba(90, 165, 253, 1)
+
+}
+.slide3-step{
+  list-style-type: disc;
+  list-style-position: outside;
+  padding: 20px;
+
+  li{
+    font-family: League Spartan;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 25.76px;
+    text-align: left;
+    margin: 24px 0;
+    line-height: 1;
+    
+    }
+}
+.onstep{
+    width: 422px;
+    height: 26px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: League Spartan;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 25.76px;
+    text-align: left;
+    color: rgba(252, 241, 182, 1);
+}
+
+.slide4-step{
+  list-style-type: disc;
+  list-style-position: outside;
+  padding: 20px;
+
+  li{
+    font-family: League Spartan;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 25.76px;
+    text-align: left;
+    /* margin: 24px 0; */
+    margin-left: 16px;
+    /* line-height: 1; */
+    
+  }
+
+  .onstep1{
+    font-family: League Spartan;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 22.08px;
+    text-align: left;
+    margin: 24px 0;
+    color: rgba(252, 241, 187, 1);
+    
+
+
+  }
+}
+
+.slide6-step{
+  list-style-type: disc;
+  list-style-position: outside;
+  padding: 20px;
+
+  ul{
+    list-style-type: disc;
+    li{
+      font-family: League Spartan;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 25.76px;
+      text-align: left;
+      margin: 24px 0;
+      margin-left: 16px;
+      width: 354px;
+      /* height: Hug (92px)px; */
+      gap: 16px;
+      opacity: 0px;
+
+    }
+  }
+
+  #step6{
+    width: 422px;
+    height: 26px;
+    gap: 0px;
+    opacity: 0px;
+
+  }
+  
+
+}
+
+.onstep5{
+    width: 422px;
+    height: 26px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: League Spartan;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 25.76px;
+    text-align: left;
+    color: rgba(252, 241, 182, 1);
+    margin-top: 30px;
+}
+
+#dis5{
+  width: 550pxpx;
+  height: 199pxpx;
+  top: 454px;
+  left: 295px;
+  gap: 48px;
+  opacity: 0px;
+
+}
+
+#dis6{
+  width: 550px;
+  height: 297px;
+  top: 368px;
+  left: 227px;
+  gap: 48px;
+  opacity: 0px;
+}
+.slide1-Img{
+  position: absolute;
+  width: 371px;
+  height: 776px;
+  top: 126px;
+  left: 745px;
+  gap: 0px;
+  opacity: 0px;
+
+} 
+.slide2-Img{
+  position: absolute;
+  width: 516px;
+  height: auto;
+  top: 211px;
+  left: 699px;
+  gap: 0px;
+  opacity: 0px;
+} 
+
+.slide3-Img{
+  position: absolute;
+  width: 516px;
+  height: auto;
+  top: 63px;
+  left: 695px;
+  gap: 0px;
+  opacity: 0px;
+
+}
+
+.slide4-Img{
+  position: absolute;
+  width: 516px;
+  height: 1079.29px;
+  top: 0px;
+  left: 697px;
+  gap: 0px;
+  opacity: 0px;
+
+
+}
+
+.slide5-Img{
+  position: absolute;
+  width: 372px;
+  height: 778.09px;
+  top: 80px;
+  left: 815px;
+  gap: 0px;
+  opacity: 0px;
+
+}
+
+.slide6-Img{
+  position: absolute;
+  width: 372px;
+  height: 778.09px;
+  top: 69px;
+  left: 749px;
+  gap: 0px;
+  opacity: 0px;
+
+}
+
+.arrow1{
+  position: absolute;
+  width: 352px;
+  height: auto;
+  top:319px;
+  left: 511px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.arrow2{
+  position: absolute;
+  width: 352px;
+  height: auto;
+  top:430px;
+  left: 612px;
+  gap: 0px;
+  opacity: 0px;
+}
+  
+.arrow3{
+  position: absolute;
+  width: 282px;
+  height: auto;
+  top: 577px;
+  left: 605px;
+  gap: 0px;
+  opacity: 0px;
+
+}
+.arrow6{
+  position: absolute;
+  width: 220px;
+  height: auto;
+  top: 637px;
+  left: 590px;
+  gap: 0px;
+  opacity: 0px;
+
+}
+
+.progress{
+  position: absolute ;
+  width: 3px;
+  height: 283px;
+  top: 392px;
+  left: 1294px;
+  gap: 0px;
+  opacity: 0px;
+  background-color: #ffffff;
+  /* border: 3px solid rgba(66, 66, 66, 1) */
+
+}
+  .progress-bar{
+    width: 3px;
+    height: 40%;
+    background-color: rgb(46, 126, 206);
+  }
+  .progress-circle{
+    position: relative;
+    left: -8px;
+    top:-1px;
+    width: 20px;  
+    height: 20px;
+    border-radius: 50px;
+    background-color: rgb(46, 126, 206);
+  }
+
+  @keyframes animatewindow{
+    0%{
+      height: 22px;
+      background-color:rgba(90, 165, 253, 1);
+      }
+    20%{
+      height: 75px;
+      background-color:rgba(90, 165, 253, 1);
+    }
+    40%{
+      height: 75px;
+      background-color:rgba(90, 165, 253, 1);
+    }
+    60%{
+      height: 123px;
+      background-color:rgba(90, 165, 253, 1);
+    }
+    80%{
+      height: 199px;
+      background-color:rgba(90, 165, 253, 1);
+    }
+    100%{
+      height: 277px;
+      background-color:  rgba(132, 241, 94, 1);
+     
+    }
+  }
+  /* .progress-circle{
+    background-color: rgba(132, 241, 94, 1);
+  } */
+  
+  .progress-bar{
+    animation: animatewindow 12s ease-in-out infinite;
+  }
