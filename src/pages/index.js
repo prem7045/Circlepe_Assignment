@@ -78,7 +78,7 @@ export default function Home() {
           
         </div>
         <div className="progress">
-            <div className="progress-bar"></div>
+            <div className="progress-bar" style={{height:'22px'}}></div>
             <div className="progress-circle"></div>
           </div>
         <div className="discription1">
@@ -109,7 +109,7 @@ export default function Home() {
           
         </div>
         <div className="progress">
-            <div className="progress-bar"></div>
+            <div className="progress-bar" style={{height:'75px'}}></div>
             <div className="progress-circle"></div>
           </div>
         <div className="discription">
@@ -149,7 +149,7 @@ export default function Home() {
         <div className="ellipse3"></div>
         <div className="rectangle"></div>
         <div className="progress">
-            <div className="progress-bar"></div>
+            <div className="progress-bar" style={{height:'75px'}}></div>
             <div className="progress-circle"></div>
           </div>
         <div className="discription">
@@ -189,7 +189,7 @@ export default function Home() {
         <div className="ellipse4"></div>
         <div className="rectangle"></div>
         <div className="progress">
-            <div className="progress-bar"></div>
+            <div className="progress-bar"style={{height:'123px'}}></div>
             <div className="progress-circle"></div>
           </div>
         <div className="discription">
@@ -232,7 +232,7 @@ export default function Home() {
         <div className="ellipse5"></div>
         <div className="rectangle"></div>
         <div className="progress">
-            <div className="progress-bar"></div>
+            <div className="progress-bar" style={{height:'199px'}}></div>
             <div className="progress-circle"></div>
           </div>
         <div className="discription" id="dis5">
@@ -271,8 +271,8 @@ export default function Home() {
         <div className="ellipse6"></div>
         <div className="rectangle"></div>
         <div className="progress">
-            <div className="progress-bar"></div>
-            <div className="progress-circle"></div>
+        <div className="progress-bar" style={{height:'277px' ,background:  'rgba(132, 241, 94, 1)'}}></div>
+            <div className="progress-circle" id="circle"></div>
           </div>
         <div className="discription" id="dis6">
           <h1>Step <span>4</span></h1>

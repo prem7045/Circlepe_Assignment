@@ -567,7 +567,7 @@ body {
 }
   .progress-bar{
     width: 3px;
-    height: 40%;
+    height: 220px;
     background-color: rgb(46, 126, 206);
   }
   .progress-circle{
@@ -603,14 +603,31 @@ body {
     }
     100%{
       height: 277px;
-      background-color:  rgba(132, 241, 94, 1);
-     
+           
     }
   }
-  /* .progress-circle{
-    background-color: rgba(132, 241, 94, 1);
-  } */
+
   
-  .progress-bar{
+  /* .progress-bar{
     animation: animatewindow 12s ease-in-out infinite;
   }
+  @keyframes ball_color {
+    0%{
+      background-color:rgba(90, 165, 253, 1);
+    }
+    80%{
+      background-color:rgba(90, 165, 253, 1);
+    }
+    100%{
+      background-color:  rgba(132, 241, 94, 1);
+    }
+  }
+   */
+  .box-ball{
+    animation: ball_color 12s ease-in-out infinite;
+  }
+
+
+#circle{
+  background-color: rgba(132, 241, 94, 1);
+}
